@@ -16,11 +16,14 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
+    "joi": "^17.11.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.0",
+    "nodemailer": "^6.9.7",
     "path": "^0.12.7"
   },
   "devDependencies": {
+    "country-state-picker": "^1.1.5",
     "nodemon": "^3.0.1"
   }
 }
