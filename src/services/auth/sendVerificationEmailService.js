@@ -1,7 +1,7 @@
 import { registrationEmail } from "../../Emails/registrationEmail.js";
 import { jwtVerify } from "./jwtService.js";
 
-const sendVerificationEmailService = async (req, res) => {
+const sendVerificationEmailService = async (req) => {
   const authToken = req.header('Authorization').split(' ')[1];
   const data = await jwtVerify(authToken);
 
