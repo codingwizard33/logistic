@@ -39,7 +39,7 @@ const updatePasswordService = async (req) => {
     };
   
   try {
-    user.password = await bcrypt.hash(password, 10);
+    await User.findByIdAndUpdate(_id, { password: await bcrypt.hash(password, 10) });
   } catch (error) {
     return {
       status: 403,
