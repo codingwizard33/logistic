@@ -16,7 +16,7 @@ const sendVerificationEmailService = async (req) => {
 
   return {
     status: 200,
-    message: `Email verification was sent to ${data.email} address.`
+    message: `Email verification link was sent to ${data.email} address.`
   };
 };
 
