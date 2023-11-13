@@ -1,5 +1,6 @@
 # Ingnored folders
 node_modules
+src/uploads
 
 # Ignored files
 .env
