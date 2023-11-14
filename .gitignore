@@ -1,6 +1,5 @@
-# Ingnored folders
-node_modules
-src/uploads
+# Ignored folders
+node_modules/
 
 # Ignored files
 .env
