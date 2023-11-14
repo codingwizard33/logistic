@@ -3,3 +3,4 @@ node_modules/
 
 # Ignored files
 .env
+staging.UserRoles
