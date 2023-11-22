@@ -29,9 +29,6 @@ const signUpService = async (req) => {
       status: 500,
       message: error.details[0].message
     };
-  
-  const session = await mongoose.startSession();
-  session.startTransaction();
 
   try {
     var user = await User.create([{
@@ -46,13 +43,8 @@ const signUpService = async (req) => {
     }], { session });
 
     await registrationEmail(user[0]);
-
-    await session.commitTransaction();
     session.endSession();
-  } catch (error) {
-    await session.abortTransaction();
-    session.endSession();
-    
+  } catch (error) {    
     return {
       status: 500,
       message: error.message
