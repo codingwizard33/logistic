@@ -26,7 +26,7 @@ const forgotPasswordEmail = async (req) => {
                         <tr>
                             <td style="padding: 20px;">
                                 <p>To reset password, please click the button below:</p>
-                                <a href="http://logistic.local/auth/reset-password/${token}" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none;">Verify Email</a>
+                                <a href="https://6940.freelancedeveloper.site/reset_password/${token}" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none;">Reset password</a>
                                 <p>If you didn't create an account on our website, you can safely ignore this email.</p>
                             </td>
                         </tr>

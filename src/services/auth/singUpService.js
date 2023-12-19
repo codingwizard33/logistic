@@ -1,5 +1,4 @@
 import bcrypt from "bcrypt";
-import mongoose from "mongoose";
 
 import Country from "../../models/Country.js";
 import Role from "../../models/Role.js";
@@ -31,7 +30,7 @@ const signUpService = async (req) => {
     };
 
   try {
-    var user = await User.create([{
+    var user = await User.create({
       country: country,
       companyName: companyName,
       registrationNo: registrationNo,
@@ -40,10 +39,9 @@ const signUpService = async (req) => {
       phoneNo: phoneNo,
       password: await bcrypt.hash(password, 10),
       role: role
-    }], { session });
+    });
 
-    await registrationEmail(user[0]);
-    session.endSession();
+    await registrationEmail(user);
   } catch (error) {    
     return {
       status: 500,
